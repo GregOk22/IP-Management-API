@@ -60,4 +60,4 @@ There are four Available Endpoints to work with [seen here](src/main/java/com/ex
 
 ## Next Steps
  - Business logic can be improved here to better determine when a CIDR block is available, divide existing blocks, etc.
- - More tests can be added to verify functionality throughout the application [I started writign some here](src/test/java/com/example/ipmanager/IPAddress/IPManagerApplicationTests.java)
+ - More tests can be added to verify functionality throughout the application [I started writign some here](src/test/java/com/example/ipmanager/IPManagerApplicationTests.java)
