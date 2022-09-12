@@ -1,0 +1,6 @@
+com/example/ipmanager/IPManagerApplication.class
+com/example/ipmanager/IPAddress/IPAddressConfig.class
+com/example/ipmanager/IPAddress/IPAddressRepository.class
+com/example/ipmanager/IPAddress/IPAddress.class
+com/example/ipmanager/IPAddress/IPAddressController.class
+com/example/ipmanager/IPAddress/IPAddressService.class
