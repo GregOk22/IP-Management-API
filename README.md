@@ -19,7 +19,7 @@ This is a simple REST API supporting a few functionalities for an IP Address cla
 ## Architecture
  
 The application is broken down into 3 primary layers
- - API Layer (containing the API endpoint mappings)
+ - API Layer (containing the API endpoint mappings [src/main/java/com/example/ipmanager/IPAddress/IPAddressController.java](IPAddressController.java))
  - Service Layer (containing the business logic)
  - Data Layer (Spring Data JPA + Repository communicating with PostgreSQL)
 
