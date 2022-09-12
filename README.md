@@ -18,20 +18,20 @@ This is a simple REST API supporting a few functionalities for an IP Address cla
 
 ## Architecture
  
-The application is broken down into 3 primary layers
+The application is broken down into design layers
  - API Layer (containing the API endpoint mappings [IPAddressController.java](src/main/java/com/example/ipmanager/IPAddress/IPAddressController.java)
- - Service Layer (containing the business logic)
- - Data Layer (Spring Data JPA + Repository communicating with PostgreSQL)
+ - Service Layer (containing the business logic) [IPAddressService.java](src/main/java/com/example/ipmanager/IPAddress/IPAddressService.java)
+ - Data Layer (Spring Data JPA [IPAddress.java](src/main/java/com/example/ipmanager/IPAddress/IPAddress.java) + Repository communicating with PostgreSQL [IPAddressRepository.java](src/main/java/com/example/ipmanager/IPAddress/IPAddressRepository.java))
 
 
 ## Data Object
 
-IPAddress = {"address": (String), "status": (String)}
+IPAddress = {"address": (String), "status": (String)} [IPAddress.java](src/main/java/com/example/ipmanager/IPAddress/IPAddress.java)
 
 
 ## API Endpoints
 
-There are four Available Endpoints to work with:
+There are four Available Endpoints to work with [seen here](src/main/java/com/example/ipmanager/IPAddress/IPAddressController.java):
 1. localhost:8080/api/v1/GetAllAddresses
  - A GET request that returns a list of all IP Addresses in the database
 
@@ -55,9 +55,9 @@ There are four Available Endpoints to work with:
  
  - The application utilizes a PostgreSQL database titled 'ipmanager'
  - The database contains one table titled 'ipaddress' which resets after each run (for simplicity)
- - The table preloads 6 IP Addresses into the database upon load for quick viewing of data (10.0.0.0 - 10.0.0.5)
+ - The table preloads 6 IP Addresses into the database upon load for quick viewing of data (10.0.0.0 - 10.0.0.5) [seen here](src/main/java/com/example/ipmanager/IPAddress/IPAddressConfig.java)
 
 
 ## Next Steps
  - Business logic can be improved here to better determine when a CIDR block is available, divide existing blocks, etc.
- - More tests can be added to verify functionality throughout the application
+ - More tests can be added to verify functionality throughout the application [I started writign some here](src/test/java/com/example/ipmanager/IPAddress/IPManagerApplicationTests.java)
