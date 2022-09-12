@@ -4,11 +4,25 @@ An IP Management API created with Spring Boot, Spring Data JPA, and PostgreSQL!
 This is a simple REST API supporting a few functionalities for an IP Address class containing two pieces of data (an address, and a status).
 
 ## Contents
+- [Requirements](#Requirements)
+- [Architecture](#Architecture)
 - [Data Object](#Data-Object)
 - [API Endpoints](#API-Endpoints)
-- [Architecture](#Architecture)
 - [Initial Load](#Initial-Load)
 - [Next Steps / Improvements](#Next-Steps)
+
+
+## Requirements
+ - Java SE Development Kit
+ - PostgreSQL server running
+
+## Architecture
+ 
+The application is broken down into 3 primary layers
+ - API Layer (containing the API endpoint mappings)
+ - Service Layer (containing the business logic)
+ - Data Layer (Spring Data JPA + Repository communicating with PostgreSQL)
+
 
 ## Data Object
 
@@ -35,14 +49,6 @@ There are four Available Endpoints to work with:
 4. localhost:8080/api/v1/ReleaseAddresses
  - A PUT request that expects a parameter of 'address', which accepts a standard IPv4 addresss (eg. 10.0.0.1)
  - The incoming address is verified to exist in the database, then has it's status updated to "available"
-
- 
-## Architecture
- 
-The application is broken down into 3 primary layers
- - API Layer (containing the API endpoint mappings)
- - Service Layer (containing the business logic)
- - Data Layer (Spring Data JPA + Repository communicating with PostgreSQL)
  
  
 ## Initial Load
