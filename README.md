@@ -3,13 +3,19 @@ An IP Management API created with Spring Boot, Spring Data JPA, and PostgreSQL!
 
 This is a simple REST API supporting a few functionalities for an IP Address class containing two pieces of data (an address, and a status).
 
+## Contents
+- [Data Object](#Data-Object)
+- [API Endpoints](#API-Endpoints)
+- [Architecture](#Architecture)
+- [Initial Load](#Initial-Load)
+- [Next Steps / Improvements](#Next-Steps)
 
-**Data Object
+## Data Object
 
 IPAddress = {"address": (String), "status": (String)}
 
 
-**Endpoints
+## API Endpoints
 
 There are four Available Endpoints to work with:
 1. localhost:8080/api/v1/GetAllAddresses
@@ -31,7 +37,7 @@ There are four Available Endpoints to work with:
  - The incoming address is verified to exist in the database, then has it's status updated to "available"
 
  
-**Architecture
+## Architecture
  
 The application is broken down into 3 primary layers
  - API Layer (containing the API endpoint mappings)
@@ -39,8 +45,13 @@ The application is broken down into 3 primary layers
  - Data Layer (Spring Data JPA + Repository communicating with PostgreSQL)
  
  
-**Initial Load
+## Initial Load
  
  - The application utilizes a PostgreSQL database titled 'ipmanager'
  - The database contains one table titled 'ipaddress' which resets after each run (for simplicity)
  - The table preloads 6 IP Addresses into the database upon load for quick viewing of data (10.0.0.0 - 10.0.0.5)
+
+
+## Next Steps
+ - Business logic can be improved here to better determine when a CIDR block is available, divide existing blocks, etc.
+ - More tests can be added to verify functionality throughout the application
