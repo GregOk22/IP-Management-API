@@ -32,6 +32,7 @@ IPAddress = {"address": (String), "status": (String)} [IPAddress.java](src/main/
 ## API Endpoints
 
 There are four Available Endpoints to work with [seen here](src/main/java/com/example/ipmanager/IPAddress/IPAddressController.java):
+
 **1. localhost:8080/api/v1/GetAllAddresses**
  - A GET request that returns a list of all IP Addresses in the database
 
