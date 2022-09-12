@@ -43,11 +43,11 @@ There are four Available Endpoints to work with [IPAddressController.java](src/m
  - Incoming CIDR blocks containing an address already in the database will not be created
  - After recieving a valid CIDR block, every IPv4 address within the block (including the network & broadcast address) are crated as IP Address objects and inserted into the database with status values of "available"
 
-**3. localhost:8080/api/v1/AcquireAddresses**
+**3. localhost:8080/api/v1/AcquireAddress**
  - A PUT request that expects a parameter of 'address', which accepts a standard IPv4 addresss (eg. 10.0.0.1)
  - The incoming address is verified to exist in the database, then has it's status updated to "acquired"
 
-**4. localhost:8080/api/v1/ReleaseAddresses**
+**4. localhost:8080/api/v1/ReleaseAddress**
  - A PUT request that expects a parameter of 'address', which accepts a standard IPv4 addresss (eg. 10.0.0.1)
  - The incoming address is verified to exist in the database, then has it's status updated to "available"
  
