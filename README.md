@@ -39,7 +39,7 @@ There are four Available Endpoints to work with [IPAddressController.java](src/m
 **2. localhost:8080/api/v1/CreateCIDRBlock**
  - A POST request that expects a parameter of 'fullAddress', which accepts an ip address with CIDR (eg. 10.0.0.0/24)
  - The incoming address does some simple validation using regular expressions to verify that the address is correctly formatted
- - For simplicity, this application currently only supports CIDR block /24 - /30
+ - For simplicity, this application currently only supports CIDR blocks /24 - /30
  - Incoming CIDR blocks containing an address already in the database will not be created
  - After recieving a valid CIDR block, every IPv4 address within the block (including the network & broadcast address) are crated as IP Address objects and inserted into the database with status values of "available"
 
